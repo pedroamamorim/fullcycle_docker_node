@@ -24,7 +24,8 @@ services:
     networks:
       - my-network
     volumes:
-      - ./node:/usr/src/app
+      - ./node/index.js:/usr/src/app/index.js
+      - ./node/db.js:/usr/src/app/db.js
     ports:
       - 3000:3000
     depends_on:
